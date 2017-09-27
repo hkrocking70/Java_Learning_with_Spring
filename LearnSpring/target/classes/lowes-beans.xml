@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ashok" class="com.lowes.beans.User">
+		<property name="userId" value="4"></property>
+		<property name="userName" value="Ashok"></property>
+		<property name="userMail" value="ashok@lowes.com"></property>
+		<property name="contactNumber" value="98754123"></property>
+		<property name="address">
+			<null />
+		</property>
+	</bean>
+
+	<bean id="mukul" class="com.lowes.beans.User">
+		<constructor-arg name="userId" value="3"></constructor-arg>
+		<constructor-arg name="userName" value="Mukul"></constructor-arg>
+		<constructor-arg name="userMail" value="mukul@yahoo.com"></constructor-arg>
+		<constructor-arg name="contactNumber" value="986541237"></constructor-arg>
+		<constructor-arg name="address" ref="addr"></constructor-arg>
+	</bean>
+	
+	<bean id="addr" class="com.lowes.beans.Address" />
+</beans>

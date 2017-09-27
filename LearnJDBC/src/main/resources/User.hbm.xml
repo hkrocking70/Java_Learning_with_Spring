@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lowes.beans.User" table="user">
+		<meta attribute="class-description">
+			This class contains the User detail.
+		</meta>
+		<id name="userId" type="int" column="uid">
+			<generator class="native" />
+		</id>
+		<property name="company" column="company" type="int" />
+		<property name="userName" column="uname" type="string" />
+		<property name="userMail" column="umail" type="string" />
+		<property name="contactNumber" column="contactno" type="string" />
+		<many-to-one name="address" class="com.lowes.beans.Address"
+			column="addr" cascade="all"/>
+	</class>
+</hibernate-mapping>

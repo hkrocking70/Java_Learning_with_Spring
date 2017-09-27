@@ -1,0 +1,1 @@
+{"id":0,"name":"shed_properties","isProperty":false,"subQuestions":[{"id":1,"name":"color","value":"black","isProperty":false,"subQuestions":[{"id":3,"name":"text","value":"hello","dependsOn":"color:black","isProperty":false,"subQuestions":[]}]},{"id":2,"name":"color","value":"red","isProperty":false,"subQuestions":[]}]}
